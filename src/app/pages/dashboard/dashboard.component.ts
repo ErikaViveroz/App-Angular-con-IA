@@ -1,6 +1,6 @@
 /// <reference types="google.maps" />
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { MarkerClusterer } from "@googlemaps/markerclusterer";
 import { HttpClient } from '@angular/common/http';
 
@@ -12,7 +12,9 @@ declare var google: any;
   templateUrl: 'dashboard.component.html'
 })
 
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('mapContainer') mapElement!: ElementRef;
 
   wifiPoints: any[] = [];
   map!: google.maps.Map;
@@ -23,7 +25,9 @@ export class DashboardComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  ngAfterViewInit() {
 
     const cdmx = new google.maps.LatLng(19.4326, -99.1332);
 
@@ -34,7 +38,7 @@ export class DashboardComponent implements OnInit {
     };
 
     this.map = new google.maps.Map(
-      document.getElementById("map"),
+      this.mapElement.nativeElement,
       mapOptions
     );
 
