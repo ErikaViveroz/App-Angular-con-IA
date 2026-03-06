@@ -24,14 +24,24 @@ Dashboard
     Mapa con clustering
     Filtrado por alcaldía
 
+![Mapa Clustering](src/assets/img/docs/mapClustering.png)
+
+![Mapa Clustering Filtrado por alcaldías](src/assets/img/docs/filterClusters.png)
+
 Maps
     Obtiene la ubicación del usuario
     Calcula los 5 puntos Wi-Fi más cercanos
     Muestra el punto del usuario y los puntos recomendados
 
+![Mapa scope por aproximación](src/assets/img/docs/mapScore.png)
+
+![Puntos wifi más cercanos](src/assets/img/docs/wifi.png)
+
 Table
     Muestra la cantidad total de puntos Wi-Fi
     Lista los primeros 20 registros
+
+![Tabla](src/assets/img/docs/table.png)
 
 🧱 Arquitectura
 
@@ -85,6 +95,10 @@ Firebase Hosting
     Marker Clustering
 
     Bootstrap (Paper Dashboard Template)
+
+✔ Compatibilidad
+    Node 18+
+    Angular 17+
 
 🗄 Modelo de datos
 
@@ -169,9 +183,11 @@ La inteligencia artificial fue utilizada como apoyo en varias etapas del desarro
         "Tengo esta lista de proyectos *lista*, cuál consideras que sea un reto? 2.- Crees que para el que consideraste un reto pueda ayudarme a hacerlo al 100%? 2.- Crees que para el que consideraste un reto necesite buscar una plantilla o sería mejor hacer el diseño completo? Ten en cuenta que tengo max de entregar el viernes"
 
     generación de ejemplos de código
-        "Si, quiero que me enseñes a hacerlo, ademas de eso solo ten en cuenta que radico en córdoba y no podría probar la proximidad a menos que se lo mande a alguien que sepa que vive por alla Otra cosa, que es más retador de las 3 opciones que me dieron a elegir para hacer :clustering / score simple por proximidad / lista ordenada por score?"
+        "Si, quiero que me enseñes a hacerlo, ademas de eso solo ten en cuenta que radico en córdoba y no podría probar la proximidad a menos que se lo mande a alguien que sepa que vive por alla o dame opciones de prueba, Otra cosa, que es más retador de las 3 opciones que me dieron a elegir para hacer :clustering / score simple por proximidad / lista ordenada por score?"
 
     integración de Google Maps API
+        "¿Cómo integrar Google Maps JavaScript API en un proyecto Angular para mostrar marcadores a partir de coordenadas almacenadas en Firebase Realtime Database?"
+
     implementación de clustering
         "1.- Es normal que salgan de color rojo y azul? 2.- A que te refieres con los colores verde, naranja y rojo? 3.- Y estas mejoras que mencionaste "const bounds = new google.maps.LatLngBounds(); this.markers.forEach(marker => { bounds.extend(marker.getPosition()); }); this.map.fitBounds(bounds);" y esta "this.cluster = new MarkerClusterer({ map: this.map, markers: this.markers, algorithmOptions: { maxZoom: 15 } });" en qué beneficia y en donde irían?"
 
