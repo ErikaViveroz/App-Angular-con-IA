@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 export interface WifiPoint {
     id: number;
@@ -20,11 +21,14 @@ export class TableComponent implements OnInit {
     totalPoints = 0;
     limit = 20;
 
+    constructor(private http: HttpClient) { }
+
     ngOnInit() {
 
-        fetch('assets/data/wifi.json')
-            .then(res => res.json())
-            .then(data => {
+        this.http.get<any>('https://wifi-cdmx-24918-default-rtdb.firebaseio.com/.json')
+            .subscribe(data => {
+                // Convertimos el objeto de Firebase a un array
+                const array = Object.values(data);
 
                 this.wifiPoints = data;
                 this.totalPoints = data.length;

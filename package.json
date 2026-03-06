@@ -67,5 +67,17 @@
     "protractor": "7.0.0",
     "ts-node": "~10.9.1",
     "typescript": "~4.7.2"
-  }
+  },
+  "description": "![version](https://img.shields.io/badge/version-2.4.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/paper-dashboard-angular.svg?maxAge=2592000)]() [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/paper-dashboard-angular.svg?maxAge=2592000)]()  [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikaViveroz/App-Angular-con-IA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ErikaViveroz/App-Angular-con-IA/issues"
+  },
+  "homepage": "https://github.com/ErikaViveroz/App-Angular-con-IA#readme"
 }

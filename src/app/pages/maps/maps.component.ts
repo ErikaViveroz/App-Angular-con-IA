@@ -60,8 +60,12 @@ export class MapsComponent implements OnInit, AfterViewInit {
                 }
             });
 
-            this.http.get<any[]>('assets/data/wifi.json')
+            this.http.get<any>(
+                'https://wifi-cdmx-24918-default-rtdb.firebaseio.com/.json'
+            )
                 .subscribe(data => {
+
+                    const array = Object.values(data);
 
                     data.forEach(point => {
 

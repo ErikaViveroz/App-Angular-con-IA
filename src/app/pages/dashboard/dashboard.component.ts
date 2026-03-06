@@ -46,13 +46,16 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   loadWifiPoints() {
-    this.http.get<any[]>('assets/data/wifi.json')
+    this.http.get<any>(
+      'https://wifi-cdmx-24918-default-rtdb.firebaseio.com/.json'
+    )
       .subscribe(data => {
 
-        this.wifiPoints = data;
+        const array = Object.values(data);
 
-        // obtener alcaldías únicas
-        this.alcaldias = [...new Set(data.map(p => p.alcaldia))];
+        this.wifiPoints = array;
+
+        this.alcaldias = [...new Set(array.map((p: any) => p.alcaldia))];
 
         this.renderMarkers(this.wifiPoints);
 
